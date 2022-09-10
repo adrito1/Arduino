@@ -1,0 +1,59 @@
+void setup()  {
+  pinMode(8,OUTPUT); //vermelho x
+  pinMode(9,OUTPUT); //amarelo x
+  pinMode(10,OUTPUT); //verde x
+  pinMode(11,OUTPUT); //vermelho y
+  pinMode(12,OUTPUT); //amarelo y
+  pinMode(13,OUTPUT); //verde y
+}
+
+void loop() {
+  digitalWrite(8,HIGH); //ligar vermelho x
+  digitalWrite(11,LOW); //apagar vermelho y quando reiniciar
+  digitalWrite(13,HIGH); //ligar verde y
+  delay(4000); //esperar 4s
+  digitalWrite(13,LOW); //apagar verde y
+  digitalWrite(12,HIGH); //ligar amarelo y
+  delay(2000); //espera 2s
+  digitalWrite(12,LOW);
+  delay(250); //fazer led piscar por 250 milissegundos
+  digitalWrite(12,HIGH);
+  delay(250);
+  digitalWrite(12,LOW);
+  delay(250);
+  digitalWrite(12,HIGH);
+  delay(250);
+  digitalWrite(12,LOW);
+  delay(250);
+  digitalWrite(12,HIGH);
+  delay(250);
+  digitalWrite(12,LOW);
+  delay(250);
+  digitalWrite(12,HIGH);
+  delay(250);
+  digitalWrite(12,LOW); // apagar o led amarelo y apos ele piscar
+  digitalWrite(11,HIGH); // ligar verlho y
+  digitalWrite(8,LOW); // apagar vermelho x
+  digitalWrite(10,HIGH); //ligar verde x
+  delay(4000); // esperar 4s
+  digitalWrite(10,LOW); //apagar verde x
+  digitalWrite(9,HIGH); //ligar amarelo x
+  delay(2000); //esperar 2s
+  digitalWrite(9,LOW);
+  delay(250); //fazer led amarelo x piscar
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW); //apagar led amarelo x e iniciar tudo do começo
+}
