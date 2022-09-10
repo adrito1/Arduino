@@ -1,0 +1,21 @@
+int led = 8;  
+int botao = 2; 
+int estadoBotao = 0;  //Variável que conterá os estados do botão (0 LOW, 1 HIGH).
+ 
+void setup() {
+  pinMode(led,OUTPUT);  
+  pinMode(botao,INPUT); // input é para botao 
+}
+
+void loop() {  
+  
+  estadoBotao = digitalRead(botao);      //Lendo o estado do pino 2    
+   
+  //Verificando o estado do botão para definir se acenderá ou
+  //apagará o led.  
+  if (estadoBotao == HIGH) {
+    digitalWrite(led,HIGH); //Botão pressionado, acende o led.
+  } else {
+    digitalWrite(led,LOW);  //Botão não pressionado, apaga o led.    
+  }       
+}
