@@ -1,0 +1,48 @@
+unsigned long changeTime; // tempo desde que o botão foi pressionado
+
+void setup() {
+pinMode(8, OUTPUT); // VERDE
+pinMode(9, OUTPUT); // AMARELO
+pinMode(10, OUTPUT); // VERMELHO
+pinMode(7, OUTPUT); //VERMELHO
+pinMode(6, OUTPUT); //VERDE
+pinMode(5, INPUT); // botão no pino 5
+// acende a luz verde (carros) e vermelha (pedestre)
+digitalWrite(10, HIGH);
+digitalWrite(7, HIGH);
+}
+
+void loop() {
+int state = digitalRead(5);
+
+if (state == HIGH && (millis() - changeTime) > 5000) { 
+changeLights();
+}
+}
+
+void changeLights() {
+digitalWrite(10, LOW); // apaga o verde
+digitalWrite(9, HIGH); // acende o amarelo
+delay(2000); // espera 2 segundos
+digitalWrite(9, LOW); // apaga o amarelo
+digitalWrite(8, HIGH); // acende o vermelho
+delay(1000); // espera 1 segundo, por segurança
+digitalWrite(7, LOW); // apaga o vermelho dos pedestres
+digitalWrite(6, HIGH); // acende o verde dos pedestres
+delay(5000); // espera por um intervalo de tempo predefinido (variável = 5seg)
+// pisca o verde dos pedestres
+for (int x=0; x<10; x++) {
+digitalWrite(6, HIGH);
+delay(250);
+digitalWrite(6, LOW);
+delay(250);
+}
+// acende o vermelho dos pedestres
+digitalWrite(7, HIGH);
+delay(500);
+digitalWrite(8, LOW); // apaga o vermelho
+digitalWrite(10, HIGH); // acende o verde
+// registra o tempo desde a última alteração no semáforo
+changeTime = millis();
+// depois retorna para o loop principal do programa
+}
