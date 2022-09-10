@@ -1,0 +1,33 @@
+void setup()  {
+  pinMode(8,OUTPUT); //vermelho
+  pinMode(9,OUTPUT); //amarelo
+  pinMode(10,OUTPUT); //verde
+}
+
+void loop() {
+  digitalWrite(8,HIGH); //ligar vermelho
+  delay(4000); //esperar 4s
+  digitalWrite(8,LOW); //apagar vermelho
+  digitalWrite(10,HIGH); //ligar verde
+  delay(4000); //esperar 4s
+  digitalWrite(10,LOW); //apagar verde
+  digitalWrite(9,HIGH); //ligar amarelo
+  delay(2000); // esperar 2s
+  digitalWrite(9,LOW); //piscar na variavel de 25 milissegundos
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250); // piscar 4X
+  digitalWrite(9,LOW); //volta ao inicio
+}
