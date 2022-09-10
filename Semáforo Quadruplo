@@ -1,0 +1,109 @@
+void setup()  {
+  pinMode(8,OUTPUT); //vermelho x
+  pinMode(9,OUTPUT); //amarelo x
+  pinMode(10,OUTPUT); //verde x
+  pinMode(11,OUTPUT); //vermelho y
+  pinMode(12,OUTPUT); // amarelo y
+  pinMode(13,OUTPUT); //verde y
+  pinMode(5,OUTPUT); //verde z
+  pinMode(6,OUTPUT); //amarelo z
+  pinMode(7,OUTPUT); //vermelho z
+  pinMode(4,OUTPUT); //verde b
+  pinMode(3,OUTPUT); //amarelo b
+  pinMode(2,OUTPUT); //vermelho b
+}
+
+void loop() {
+  digitalWrite(8,HIGH); //ligar vermelho x
+  digitalWrite(11,LOW); //apagar vermelho y ao reiniciar
+  digitalWrite(13,HIGH); //ligar verde y
+  digitalWrite(7,HIGH); //ligar vermelho z
+  digitalWrite(4,HIGH); //ligar verde b
+  delay(10000); //esperar 10s
+  digitalWrite(13,LOW); //apagar verde y
+  digitalWrite(12,HIGH); //ligar amarelo y
+  digitalWrite(4,LOW); //apagar verde b
+  digitalWrite(3,HIGH); //ligar amarelo b
+  delay(1000); //esperar 1s
+  digitalWrite(12,LOW); //apagar amarelo y
+  digitalWrite(3,LOW); //apagar amarelo b
+  delay(250); //piscar led amarelo y e b
+  digitalWrite(12,HIGH);
+  digitalWrite(3,HIGH);
+  delay(250);
+  digitalWrite(12,LOW); 
+  digitalWrite(3,LOW);
+  delay(250);
+  digitalWrite(12,HIGH);
+  digitalWrite(3,HIGH);
+  delay(250);
+  digitalWrite(12,LOW);
+  digitalWrite(3,LOW);
+  delay(250);
+  digitalWrite(12,HIGH);
+  digitalWrite(3,HIGH);
+  delay(250);
+  digitalWrite(12,LOW);
+  digitalWrite(3,LOW);
+  delay(250);
+  digitalWrite(12,HIGH);
+  digitalWrite(3,HIGH);
+  delay(250);
+  digitalWrite(12,LOW); //parar de piscar led amarelo y e b
+  digitalWrite(11,HIGH); //ligar vermelho y
+  digitalWrite(8,LOW); // apagar vermelho x
+  digitalWrite(10,HIGH); //ligar verde x
+  digitalWrite(3,LOW); //apagar amarelo b
+  digitalWrite(2,HIGH); //ligar vermelho b
+  delay(5000); //esperar 5s
+  digitalWrite(10,LOW); //apagar verde x
+  digitalWrite(9,HIGH); //ligar amarelo x
+  delay(1000); //esperar 1s
+  digitalWrite(9,LOW); //apagar amarelo x
+  delay(250); //piscar led amarelo x
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW); 
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW);
+  delay(250);
+  digitalWrite(9,HIGH);
+  delay(250);
+  digitalWrite(9,LOW); //parar de piscar led amarelo x
+  digitalWrite(2,LOW); //apagar vermelho b
+  digitalWrite(4,HIGH); //ligar verde b
+  digitalWrite(11,HIGH); //ligar vermelho y
+  digitalWrite(8,HIGH); //ligar vermelho x
+  digitalWrite(7,LOW); //apagr vermelho z
+  digitalWrite(5,HIGH); //ligar verde z
+  delay(5000); //esperar 5s
+  digitalWrite(5,LOW); //apagar verde z
+  digitalWrite(6,HIGH); //ligar amarelo z
+  delay(1000); //esperar 1s
+  digitalWrite(6,LOW); //apagar amarelo z
+  delay(250); //piscar led amarelo z
+  digitalWrite(6,HIGH);
+  delay(250);
+  digitalWrite(6,LOW); 
+  delay(250);
+  digitalWrite(6,HIGH);
+  delay(250);
+  digitalWrite(6,LOW);
+  delay(250);
+  digitalWrite(6,HIGH);
+  delay(250);
+  digitalWrite(6,LOW);
+  delay(250);
+  digitalWrite(6,HIGH);
+  delay(250);
+  digitalWrite(6,LOW); //parar de piscar led amarelo z
+  digitalWrite(7,HIGH); //ligar vermelho z
+  digitalWrite(13,HIGH); //ligar verde y
+  digitalWrite(8,HIGH); //ligar vermelho x
+}
