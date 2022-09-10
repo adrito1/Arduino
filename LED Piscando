@@ -1,0 +1,16 @@
+int led = 3; 
+
+void setup() {
+  pinMode (led,OUTPUT);
+
+}
+
+void loop() {
+  digitalWrite (led,HIGH);  // ligar o led
+  delay (200); //tempo que vai permanecer ligado
+  digitalWrite (led,LOW);  // desligar o led
+  delay (200);  //tempo que vai permanecer desligado
+
+  //o tempo é dado em milissegundos 1000 = 1 segundos
+}
+
